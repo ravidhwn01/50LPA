@@ -1,0 +1,2 @@
+// ignore the .exe files inside the folders
+**/*.exe
