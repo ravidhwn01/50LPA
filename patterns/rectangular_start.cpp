@@ -81,6 +81,26 @@ void printStarPyramid(int n){
     }
 }
 
+void invertedStarPyramid(int n){
+    for (int i = n; i > 0; i--)
+    {
+        for (int j = 0; j < n-i; j++)
+        {
+            cout << " ";
+        }
+        for (int j = 0; j < 2*i-1; j++)
+        {
+            cout << "*";
+        }
+        cout << endl;
+    }
+}
+
+void  printDiamond(int n) {
+    printStarPyramid(n);
+    invertedStarPyramid(n);
+}
+
 int main()
 {
     int n;
@@ -89,9 +109,11 @@ int main()
     // printRightAngledTriangle(n);
     // printRightAngledNumberPyramid(n);
     // printRightAngledNumberPyramid2(n);
-    printInvertedRightPyramid(n);
-    printInvertedNumberedRightPyramid(n);
-    printStarPyramid(n);
+    // printInvertedRightPyramid(n);
+    // printInvertedNumberedRightPyramid(n);
+    // printStarPyramid(n);
+    invertedStarPyramid(n);
+    printDiamond(n);
 
     return 0;
 }
