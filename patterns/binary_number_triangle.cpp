@@ -39,11 +39,69 @@ void printIncreasingNumberTriangle(int n)
     }
 }
 
+void printDecreasingNumberTriangle(int n)
+{
+    int count = n * (n + 1) / 2; // sum of first n natural numbers
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j <= i; j++)
+        {
+            cout << count << " ";
+            count--;
+        }
+        cout << endl;
+    }
+}
+
+void printIncreasingLetterTriangle(int n){
+    char ch = 'A';
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j <= i; j++)
+        {
+            cout << ch << " ";
+            ch++;
+        }
+        cout << endl;
+    }
+
+}
+void printSameIncreasingLetterTriangle(int n){
+   
+    for (int i = 0; i < n; i++)
+    {
+        char ch = 'A';
+        for (int j = 0; j <= i; j++)
+        {
+            cout << ch << " ";
+            ch++;
+        }
+        cout << endl;
+    }
+
+}
+
+void printInvertedSameIncreasingLetterTriangle(int n){
+    for(int i = n; i>0;i--){
+        char ch = 'A';
+        for(int j = 1; j<=i;j++){
+            cout << ch << " ";
+            ch++;
+        }
+        cout << endl;
+    }
+    
+}
+
 int main()
 {
     int n = 5;
-    printBinaryNumberTriangle(n);
-    printNumberCrown(n);
-    printIncreasingNumberTriangle(n);
+    // printBinaryNumberTriangle(n);
+    // printNumberCrown(n);
+    // printDecreasingNumberTriangle(n);
+    // printIncreasingNumberTriangle(n);
+    // printIncreasingLetterTriangle(n);
+    // printSameIncreasingLetterTriangle(n);
+    printInvertedSameIncreasingLetterTriangle(n);
     return 0;
     }
