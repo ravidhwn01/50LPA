@@ -27,7 +27,7 @@ void printNumberCrown(int n)
 
 void printIncreasingNumberTriangle(int n)
 {
-    int count = 1;   // i forgot to initialize count to 1
+    int count = 1; // i forgot to initialize count to 1
     for (int i = 0; i < n; i++)
     {
         for (int j = 0; j <= i; j++)
@@ -53,7 +53,8 @@ void printDecreasingNumberTriangle(int n)
     }
 }
 
-void printIncreasingLetterTriangle(int n){
+void printIncreasingLetterTriangle(int n)
+{
     char ch = 'A';
     for (int i = 0; i < n; i++)
     {
@@ -64,10 +65,10 @@ void printIncreasingLetterTriangle(int n){
         }
         cout << endl;
     }
-
 }
-void printSameIncreasingLetterTriangle(int n){
-   
+void printSameIncreasingLetterTriangle(int n)
+{
+
     for (int i = 0; i < n; i++)
     {
         char ch = 'A';
@@ -78,59 +79,84 @@ void printSameIncreasingLetterTriangle(int n){
         }
         cout << endl;
     }
-
 }
 
-void printInvertedSameIncreasingLetterTriangle(int n){
-    for(int i = n; i>0;i--){
+void printInvertedSameIncreasingLetterTriangle(int n)
+{
+    for (int i = n; i > 0; i--)
+    {
         char ch = 'A';
-        for(int j = 1; j<=i;j++){
+        for (int j = 1; j <= i; j++)
+        {
             cout << ch << " ";
             ch++;
         }
         cout << endl;
     }
-    
 }
 
-void printAlphaRamp(int n){
-    for(int i=0; i<n;i++){
-    // for(int i=n; i<=0;i--){ for inverted
+void printAlphaRamp(int n)
+{
+    for (int i = 0; i < n; i++)
+    {
+        // for(int i=n; i<=0;i--){ for inverted
 
-        char ch = 'A'+i;
-        for(int j=0; j<=i;j++){
+        char ch = 'A' + i;
+        for (int j = 0; j <= i; j++)
+        {
             cout << ch << " ";
         }
         cout << endl;
     }
 }
 
-void printAlphaHillPattern(int n){
-    for(int i=0; i<n;i++){
+void printAlphaHillPattern(int n)
+{
+    for (int i = 0; i < n; i++)
+    {
         bool f = false;
         char ch = 'A';
-        for(int j=0; j<n-i-1;j++){
-            cout<<" ";
+        for (int j = 0; j < n - i - 1; j++)
+        {
+            cout << " ";
         }
-        for(int j=0; j<2*i+1;j++){
-            if(j<=i){
-                cout<<ch;
+        for (int j = 0; j < 2 * i + 1; j++)
+        {
+            if (j <= i)
+            {
+                cout << ch;
                 ch++;
                 f = true;
-            } 
-            else{
-                if(f == true){    // we have to decrease 2 times 
+            }
+            else
+            {
+                if (f == true)
+                { // we have to decrease 2 times
                     ch--;
                     f = false;
                 }
                 ch--;
-                cout<<ch;
+                cout << ch;
             }
         }
-        cout<<endl;
+        cout << endl;
     }
 }
+void printAlphaAlphaTrianglePattern(int n)
+{
 
+    for (int i = 0; i < n; i++)
+    {
+        char ch = 'A' + n - i - 1;
+        for (int j = 0; j <= i; j++)
+        {
+            cout << ch << " ";
+            ch++;
+        }
+        ch--;
+        cout << endl;
+    }
+}
 int main()
 {
     int n = 5;
@@ -145,5 +171,6 @@ int main()
     // printAlphaRamp(n);
     cout << endl;
     printAlphaHillPattern(n);
+    printAlphaAlphaTrianglePattern(n);
     return 0;
-    }
+}
