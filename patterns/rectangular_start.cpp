@@ -111,9 +111,9 @@ int main()
     // printRightAngledNumberPyramid2(n);
     // printInvertedRightPyramid(n);
     // printInvertedNumberedRightPyramid(n);
-    // printStarPyramid(n);
-    invertedStarPyramid(n);
-    printDiamond(n);
+    printStarPyramid(n);
+    // invertedStarPyramid(n);
+    // printDiamond(n);
 
     return 0;
 }

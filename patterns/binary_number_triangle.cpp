@@ -93,6 +93,44 @@ void printInvertedSameIncreasingLetterTriangle(int n){
     
 }
 
+void printAlphaRamp(int n){
+    for(int i=0; i<n;i++){
+    // for(int i=n; i<=0;i--){ for inverted
+
+        char ch = 'A'+i;
+        for(int j=0; j<=i;j++){
+            cout << ch << " ";
+        }
+        cout << endl;
+    }
+}
+
+void printAlphaHillPattern(int n){
+    for(int i=0; i<n;i++){
+        bool f = false;
+        char ch = 'A';
+        for(int j=0; j<n-i-1;j++){
+            cout<<" ";
+        }
+        for(int j=0; j<2*i+1;j++){
+            if(j<=i){
+                cout<<ch;
+                ch++;
+                f = true;
+            } 
+            else{
+                if(f == true){    // we have to decrease 2 times 
+                    ch--;
+                    f = false;
+                }
+                ch--;
+                cout<<ch;
+            }
+        }
+        cout<<endl;
+    }
+}
+
 int main()
 {
     int n = 5;
@@ -102,6 +140,10 @@ int main()
     // printIncreasingNumberTriangle(n);
     // printIncreasingLetterTriangle(n);
     // printSameIncreasingLetterTriangle(n);
-    printInvertedSameIncreasingLetterTriangle(n);
+    // printInvertedSameIncreasingLetterTriangle(n);
+    cout << endl;
+    // printAlphaRamp(n);
+    cout << endl;
+    printAlphaHillPattern(n);
     return 0;
     }
