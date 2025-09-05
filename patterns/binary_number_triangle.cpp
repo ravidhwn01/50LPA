@@ -214,6 +214,6 @@ int main()
     // printAlphaHillPattern(n);
     // printAlphaAlphaTrianglePattern(n);
 
-    printSymmetricVoidPattern(n)
+    printSymmetricVoidPattern(n);
     return 0;
 }
