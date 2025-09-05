@@ -157,6 +157,47 @@ void printAlphaAlphaTrianglePattern(int n)
         cout << endl;
     }
 }
+
+void printSymmetricVoidPattern(int n){
+    
+         int space = 0;
+    for(int i= 0; i<2*n;i++){
+        if(i<n){
+            for(int j = i; j<n;j++){
+            cout<<" * ";
+            
+            
+        }
+        for(int j = 0; j<space;j++){
+            cout<<"   ";
+        }
+       
+       for(int j = i; j<n;j++){
+            cout<<" * ";
+        }
+            space+=2;
+            
+        }
+        else{
+        
+            for(int j = 0; j<=i-n;j++){
+            cout<<" * ";
+        }
+            space-=2;
+        for(int j = 0; j<space;j++){
+            cout<<"   ";
+        }
+       
+       for(int j = 0; j<=i-n;j++){
+            cout<<" * ";
+        }
+            
+        }
+        
+        cout<<endl;
+    }
+    
+}
 int main()
 {
     int n = 5;
@@ -170,7 +211,9 @@ int main()
     cout << endl;
     // printAlphaRamp(n);
     cout << endl;
-    printAlphaHillPattern(n);
-    printAlphaAlphaTrianglePattern(n);
+    // printAlphaHillPattern(n);
+    // printAlphaAlphaTrianglePattern(n);
+
+    printSymmetricVoidPattern(n)
     return 0;
 }
