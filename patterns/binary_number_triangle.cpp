@@ -198,6 +198,53 @@ void printSymmetricVoidPattern(int n){
     }
     
 }
+
+void  printSymmetricButterflyPattern(int n){
+        int space = 2*n -2;
+        for(int i= 0; i<2*n;i++){
+
+            if(i<n){
+                for(int j = 0; j<=i;j++){
+                cout<<" * ";
+                
+                
+            }            
+            for(int j = 0; j<space;j++){
+                cout<<"   ";
+            }
+              for(int j = 0; j<=i;j++){
+                 cout<<" * ";
+                }
+                 space-=2;
+                 
+                }
+                else
+                {
+                    
+                    for(int j = i; j<2*n-1;j++){
+                    cout<<" * ";
+                }
+                if (space<0 )
+                {
+                    space=0;
+                }
+                
+                    space+=2;
+                for(int j = 0; j<space;j++){
+                    cout<<"   ";
+                }
+                for(int j = i; j<2*n-1;j++){
+                    cout<<" * ";
+                }
+            }
+           
+            
+            cout<<endl;
+        }
+
+        
+}
+
 int main()
 {
     int n = 5;
@@ -214,6 +261,8 @@ int main()
     // printAlphaHillPattern(n);
     // printAlphaAlphaTrianglePattern(n);
 
-    printSymmetricVoidPattern(n);
+    // printSymmetricVoidPattern(n);
+    cout<<endl;
+    printSymmetricButterflyPattern(n);
     return 0;
 }
