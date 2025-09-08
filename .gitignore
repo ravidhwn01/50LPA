@@ -1,2 +1,4 @@
 // ignore the .exe files inside the folders
 **/*.exe
+# Ignore the .vscode folder
+.vscode/

@@ -261,7 +261,15 @@ void printHollowRectangle(int n){
     }
     
 }
+void printNumberPattern(int n){
+    for (int i = 0; i <2*n-1; i++)
+    {
+        
+       
+    }
 
+
+}
 int main()
 {
     int n = 5;
@@ -279,9 +287,11 @@ int main()
     // printAlphaAlphaTrianglePattern(n);
 
     // printSymmetricVoidPattern(n);
-    cout<<endl;
-    printSymmetricButterflyPattern(n);
-    cout<<endl;
-    printHollowRectangle(n);
+    // cout<<endl;
+    // printSymmetricButterflyPattern(n);
+    // cout<<endl;
+    // printHollowRectangle(n);
+    // cout<<endl;
+    printNumberPattern(n);
     return 0;
 }
