@@ -41,6 +41,9 @@ void bubble_sort(int arr[],int n){
     }
 }
 
+void merge_sort(){
+    
+}
 int main()
 {
     int arr[] = {64, 25, 12, 22, 11,45,76,34,23,54};
